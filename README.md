@@ -24,7 +24,8 @@ Also notice that we are referring to the overall market sentiment instead of the
 sentiments. In other words, if a single tweet published at 08:00 is negative, this doesn’t necessarily
 mean that the price is going to drop. However if the majority of tweets in the same time window are
 negative then most probably the price is going to fall.
-* Therefore instead of labeling single tweets at a time (individual sentiments), we decided to label sets
+
+Therefore instead of labeling single tweets at a time (individual sentiments), we decided to label sets
 of tweets (overall sentiments):
 - Model Input: Set of scraped tweets from a fixed time window, e.g. 01.01.2021 between 08:00 and
 09:00.
@@ -45,13 +46,13 @@ we went for.
   
 ## Can we do better than a naïve average?
 
-QWe could assign different weights to different tweets in a "static" fashion. For instance based on the
+We could assign different weights to different tweets in a "static" fashion. For instance based on the
 number of likes, number of followers, number of retweets etc. Then we perform a weighted average
 instead of a simple average.
 However, we wouldn't consider this a good solution, since a static weighting function is, as the name
 suggests, not trainable. Depending on how we define it, it can thus represent a bottleneck for our
 model’s accuracy.
-⇨ Make the model figure out a suitable weighting function, based on the tweets metadata, as
+* Make the model figure out a suitable weighting function, based on the tweets metadata, as
 part of the training process.
 
 ## Final Model Architecture:
