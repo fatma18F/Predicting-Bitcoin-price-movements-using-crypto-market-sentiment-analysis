@@ -1,7 +1,3 @@
-# Project Specification
-
-This module contains paraphrasing API.
-
 ### Our Goal:
 
 Predict the market sentiment about Bitcoin as an aggregation of the individual tweet sentiments.
